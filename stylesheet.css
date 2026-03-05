@@ -1,0 +1,9 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+input{
+    border: solid 1px;
+}
