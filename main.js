@@ -26,7 +26,6 @@ novo_gasto.onclick = () => {
 };
 
 //---reset---
-
 let botao_reset = document.getElementById("reset");
 
 botao_reset.onclick = () => {
@@ -34,11 +33,9 @@ botao_reset.onclick = () => {
     localStorage.setItem("valor", "0");
 
     mostrargasto.textContent = `0`;
-
 };
 
 //---categorias---
-
 let cat_gasolina = document.getElementById("gasolina");
 
 let cat_comida = document.getElementById("comida");
@@ -57,7 +54,6 @@ cat_gasolina.onclick = () => {
     localStorage.setItem("valor_gasolina", total_gasolina);
 
     texto_gasolina.textContent = total_gasolina;
-
 };
 
 //---comida---
@@ -71,7 +67,7 @@ cat_comida.onclick = () =>{
     localStorage.setItem("valor_comida", total_comida);
 
     texto_comida.textContent = total_comida;
-}
+};
 
 
 //---compras---
@@ -85,15 +81,26 @@ cat_compras.onclick = () =>{
     localStorage.setItem("valor_compras", total_compras);
 
     texto_compras.textContent = total_compras;
-}
+};
 
 //---mostrar gastos---
 let button_total = document.getElementById("button_total");
 
 let texto_total = document.getElementById("texto_total");
 
-let total_gastos = Number(localStorage.getItem("valor_comida")) + Number(localStorage.getItem("valor_gasolina")) + Number(localStorage.getItem("valor_compras"));
-
 button_total.onclick = () => {
+    let total_gastos = Number(localStorage.getItem("valor_comida")) + Number(localStorage.getItem("valor_gasolina")) + Number(localStorage.getItem("valor_compras"));
+
     texto_total.textContent = `Total: Gasolina - ${texto_gasolina.textContent} Comida - ${texto_comida.textContent} Compras - ${texto_compras.textContent} === ${total_gastos}`;
 }
+
+function updateValues(){
+    const comida_local = localStorage.getItem("valor_comida");
+    texto_comida.textContent = comida_local;
+    const compras_local = localStorage.getItem("valor_compras");
+    texto_compras.textContent = compras_local;
+    const gasolina_local = localStorage.getItem("valor_gasolina");
+    texto_gasolina.textContent = gasolina_local;
+}
+
+updateValues();
