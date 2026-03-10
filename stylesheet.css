@@ -13,15 +13,24 @@ button{
     background-color:darkslategrey;
     border: solid 2px grey;
 }
+p{
+    padding-left: 10px;
+}
 #reset{
     background-color: darkred;
 }
+#button_total{
+    padding: 5px 20px 5px 20px;
+}
 .categorias{
+    margin: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 50px 90px;
     grid-column-gap: 60px;
 }
-p{
-    padding-left: 10px;
+.hud button{
+    padding: 5px 15px 5px 15px;
+    margin-top: 20px;
+    margin-left: 15px;
 }
