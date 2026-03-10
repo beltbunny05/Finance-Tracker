@@ -45,11 +45,25 @@ let cat_comida = document.getElementById("comida");
 
 let cat_compras = document.getElementById("compras");
 
+//---gasolina---
 cat_gasolina.onclick = () => {
     const categoria_gasolina = localStorage.getItem("valor");
+
+    const valor_gasolina = localStorage.getItem("valor");
+
+    localStorage.setItem("valor_gasolina", valor_gasolina);  
 
     let texto_gasolina = document.getElementById("texto_gasolina");
 
     texto_gasolina.textContent = categoria_gasolina;
 
+};
+
+//---mostrar gastos---
+let button_total = document.getElementById("button_total");
+
+let texto_total = document.getElementById("texto_total");
+
+button_total.onclick = () => {
+    texto_total.textContent = `Total: ${texto_gasolina}`;
 }
