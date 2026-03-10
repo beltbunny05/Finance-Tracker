@@ -1,7 +1,7 @@
 *{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 25px;
-    background-color: black;
+    background-color: rgb(9, 23, 22);
     color: white;
     border-radius: 25px;
 }
@@ -17,7 +17,7 @@ p{
     padding-left: 10px;
 }
 #reset{
-    background-color: darkred;
+    background-color: rgb(123, 34, 34);
 }
 #button_total{
     padding: 5px 20px 5px 20px;

@@ -73,11 +73,25 @@ cat_comida.onclick = () =>{
     texto_comida.textContent = total_comida;
 }
 
+
+//---compras---
+cat_compras.onclick = () =>{
+    let valor_digitado = Number(input_gasto.value);
+
+    let compras_atual = Number(localStorage.getItem("valor_compras")) || 0;
+
+    let total_compras = valor_digitado + compras_atual;
+
+    localStorage.setItem("valor_compras", total_compras);
+
+    texto_compras.textContent = total_compras;
+}
+
 //---mostrar gastos---
 let button_total = document.getElementById("button_total");
 
 let texto_total = document.getElementById("texto_total");
 
 button_total.onclick = () => {
-    texto_total.textContent = `Total: Gasolina - ${texto_gasolina.textContent} Comida - ${texto_comida.textContent}`;
+    texto_total.textContent = `Total: Gasolina - ${texto_gasolina.textContent} Comida - ${texto_comida.textContent} Compras - ${texto_compras.textContent}`;
 }
