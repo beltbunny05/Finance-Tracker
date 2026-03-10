@@ -25,12 +25,12 @@ novo_gasto.onclick = () => {
     mostrargasto.textContent = total;
 };
 
+let botao_reset = document.getElementById("reset");
 
-const tracker =[
-    {"gasto":"0"},
-    {"categoria":"0"},
-]
+botao_reset.onclick = () => {
 
-//Aprender como fazer o input sair dados para o tracker
-localStorage.setItem("","");
-localStorage.getItem("","");
+    localStorage.setItem("valor", "0");
+
+    mostrargasto.textContent = `0`;
+
+}
