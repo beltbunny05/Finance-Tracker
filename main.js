@@ -33,4 +33,5 @@ botao_reset.onclick = () => {
 
     mostrargasto.textContent = `0`;
 
-}
+};
+
