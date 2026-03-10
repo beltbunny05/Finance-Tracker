@@ -65,5 +65,5 @@ let button_total = document.getElementById("button_total");
 let texto_total = document.getElementById("texto_total");
 
 button_total.onclick = () => {
-    texto_total.textContent = `Total: ${texto_gasolina}`;
+    texto_total.textContent = `Total: Gasolina - ${texto_gasolina.textContent}`;
 }
