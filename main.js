@@ -37,6 +37,8 @@ botao_reset.onclick = () => {
 
 };
 
+//---categorias---
+
 let cat_gasolina = document.getElementById("gasolina");
 
 let cat_comida = document.getElementById("comida");
