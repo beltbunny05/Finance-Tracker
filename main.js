@@ -47,17 +47,31 @@ let cat_compras = document.getElementById("compras");
 
 //---gasolina---
 cat_gasolina.onclick = () => {
-    const categoria_gasolina = localStorage.getItem("valor");
 
-    const valor_gasolina = localStorage.getItem("valor");
+    let valor_digitado = Number(input_gasto.value);
 
-    localStorage.setItem("valor_gasolina", valor_gasolina);  
+    let gasolina_atual = Number(localStorage.getItem("valor_gasolina")) || 0;
 
-    let texto_gasolina = document.getElementById("texto_gasolina");
+    let total_gasolina = gasolina_atual + valor_digitado;
 
-    texto_gasolina.textContent = categoria_gasolina;
+    localStorage.setItem("valor_gasolina", total_gasolina);
+
+    texto_gasolina.textContent = total_gasolina;
 
 };
+
+//---comida---
+cat_comida.onclick = () =>{
+    let valor_digitado = Number(input_gasto.value);
+
+    let comida_atual = Number(localStorage.getItem("valor_comida")) || 0;
+
+    let total_comida = valor_digitado + comida_atual;
+
+    localStorage.setItem("valor_comida", total_comida);
+
+    texto_comida.textContent = total_comida;
+}
 
 //---mostrar gastos---
 let button_total = document.getElementById("button_total");
@@ -65,5 +79,5 @@ let button_total = document.getElementById("button_total");
 let texto_total = document.getElementById("texto_total");
 
 button_total.onclick = () => {
-    texto_total.textContent = `Total: Gasolina - ${texto_gasolina.textContent}`;
+    texto_total.textContent = `Total: Gasolina - ${texto_gasolina.textContent} Comida - ${texto_comida.textContent}`;
 }

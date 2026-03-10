@@ -3,10 +3,11 @@
     font-size: 25px;
     background-color: black;
     color: white;
-    border-radius: 5px;
+    border-radius: 25px;
 }
 input{
     border: solid 1px;
+    padding: 5px 15px 5px 15px;
 }
 button{
     background-color:darkslategrey;
@@ -14,4 +15,13 @@ button{
 }
 #reset{
     background-color: darkred;
+}
+.categorias{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 90px;
+    grid-column-gap: 60px;
+}
+p{
+    padding-left: 10px;
 }
