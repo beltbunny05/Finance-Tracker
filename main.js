@@ -92,6 +92,8 @@ let button_total = document.getElementById("button_total");
 
 let texto_total = document.getElementById("texto_total");
 
+let total_gastos = Number(localStorage.getItem("valor_comida")) + Number(localStorage.getItem("valor_gasolina")) + Number(localStorage.getItem("valor_compras"));
+
 button_total.onclick = () => {
-    texto_total.textContent = `Total: Gasolina - ${texto_gasolina.textContent} Comida - ${texto_comida.textContent} Compras - ${texto_compras.textContent}`;
+    texto_total.textContent = `Total: Gasolina - ${texto_gasolina.textContent} Comida - ${texto_comida.textContent} Compras - ${texto_compras.textContent} === ${total_gastos}`;
 }
