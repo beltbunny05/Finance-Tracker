@@ -44,11 +44,10 @@ let cat_comida = document.getElementById("comida");
 let cat_compras = document.getElementById("compras");
 
 cat_gasolina.onclick = () => {
-    const categoria_gasolina = localStorage.setItem("gasolina", valor);
+    const categoria_gasolina = localStorage.getItem("valor");
 
     let texto_gasolina = document.getElementById("texto_gasolina");
 
     texto_gasolina.textContent = categoria_gasolina;
-
 
 }
