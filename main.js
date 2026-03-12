@@ -31,6 +31,10 @@ let botao_reset = document.getElementById("reset");
 botao_reset.onclick = () => {
 
     localStorage.setItem("valor", "0");
+    localStorage.setItem("valor_gasolina", "0");
+    localStorage.setItem("valor_compras", "0");
+    localStorage.setItem("valor_comida", "0");
+
 
     mostrargasto.textContent = `0`;
 };
